@@ -1,38 +1,92 @@
-.App {
-  text-align: center;
-}
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap');
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+
+}
+
+h1 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.Calc {
+  width: 400px;
+  border: 5px solid rgb(255, 5, 201);
+  background-color: #2d154d;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.Display {
+  font-size: 1.5em; 
+  text-align: right;
+  background-color: black;
+  border: 5px solid #4b0082;
   color: white;
+  padding: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+  white-space: nowrap; 
+  text-overflow: ellipsis; 
 }
 
-.App-link {
-  color: #61dafb;
+.Buttons {
+  height: 400px;
+  border: 5px solid rgb(29, 11, 41);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  background-color: rgb(231, 78, 193);
+  padding: 10px;
+  border-radius: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Buttons > button {
+  font-family: sans-serif;
+  background-color: rgb(235, 226, 214);
+  transition: background-color 0.3s;
+}
+
+.Buttons > Deloriabutton {
+  flex: 0 1 100%; 
+  background-color: black;
+  color: #a020f0; 
+  border-radius: 15px;
+  border: 3px solid #4b0082;
+  padding: 15px;
+  margin: 0; 
+  box-sizing: border-box; 
+}
+
+.Buttons > button:hover {
+  background-color: rgb(230, 14, 97);
+}
+
+.surname {
+  grid-column: span 4;
+  width: 100%;
+  
+}
+
+.Head {
+  color: #000000;
+  background-color: rgb(255, 255, 255);
 }
